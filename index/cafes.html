@@ -3,50 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..reset.css">
-    <link rel="stylesheet" href="..style-cafe.css">
-    <title>Cafés</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style-cafe.css">
+    <title>Cafes</title>
 </head>
+
 <body>
-    <header>
-        <img src="src/logo.png" alt="#">
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="cafes.html">Cafés</a></li>
-                <li><a href="avaliar.html">Avaliar</a></li>
-                <li><a href="ranking.html">Ranking</a></li>
-             </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2><img src="src/grao-cafe.png" alt="#">Cafés Participantes</h2>
-            <div>
-                <img src="src/grao-cafe.png" alt="Café">
-                <h3>Bourbon Amarelo</h3>
-                <p>Origem: Minas Gerais</p>
-                <a href="avaliar.html">Avaliar</a>
-            </div>
-            <div>
-                <img src="src/grao-cafe.png" alt="Café">
-                <h3>Catuaí Vermelho</h3>
-                <p>Origem: Paraná</p>
-                <a href="avaliar.html">Avaliar</a>
-            </div>
-            <div>
-                <img src="src/grao-cafe.png" alt="Café">
-                <h3>Arara</h3>
-                <p>Origem: Espirito Santo</p>
-                <a href="avaliar.html">Avaliar</a>
-            </div>
-            <div>
-                <img src="src/grao-cafe.png" alt="Café">
-                <h3>Mundo Novo</h3>
-                <p>Origem: Bahia</p>
-                <a href="avaliar.html">Avaliar</a>
-            </div>
-        </section>
-    </main>
+<header class="cabecalho">
+    <img class="logo" src="src/logo.png" alt="Logo">
+
+    <nav>
+        <ul class="lista-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cafes.html">Cafés</a></li>
+            <li><a href="avaliar.html">Avaliar</a></li>
+            <li><a href="ranking.html">Ranking</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="pagina-cafes">
+
+    <h2 class="titulo-pagina">Cafés Participantes</h2>
+
+    <section class="lista-cafes">
+
+        <div class="cafe">
+            <img src="src/grao-cafe.png" alt="">
+            <h3>Bourbon Amarelo</h3>
+            <p>Origem: Minas Gerais</p>
+            <a href="avaliar.html">Avaliar</a>
+        </div>
+
+        <div class="cafe">
+            <img src="src/grao-cafe.png" alt="">
+            <h3>Catuaí Vermelho</h3>
+            <p>Origem: Paraná</p>
+            <a href="avaliar.html">Avaliar</a>
+        </div>
+
+        <div class="cafe">
+            <img src="src/grao-cafe.png" alt="">
+            <h3>Arara</h3>
+            <p>Origem: Espírito Santo</p>
+            <a href="avaliar.html">Avaliar</a>
+        </div>
+
+        <div class="cafe">
+            <img src="src/grao-cafe.png" alt="">
+            <h3>Mundo Novo</h3>
+            <p>Origem: Bahia</p>
+            <a href="avaliar.html">Avaliar</a>
+        </div>
+
+    </section>
+
+</main>
 </body>
 </html>
