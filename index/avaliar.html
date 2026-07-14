@@ -1,55 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style-avaliar.css">
+    <title>Avaliar Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<main class="pagina-avaliar">
+    <main class="pagina-avaliar">
 
-    <section class="formulario">
+        <section class="formulario">
 
-        <h2>Nova Avaliação</h2>
+            <h2 class="titulo-formulario">
+                <span class="icone-lapis">✏️</span> Nova Avaliação
+            </h2>
 
-        <label>Café</label>
-        <select>
-            <option>Bourbon Amarelo</option>
-            <option>Catuaí Vermelho</option>
-            <option>Arara</option>
-            <option>Mundo Novo</option>
-        </select>
+            <div class="campo-grupo campo-largo">
+                <label for="cafe">Café</label>
+                <div class="select-wrapper">
+                    <select id="cafe">
+                        <option>Bourbon Amarelo</option>
+                        <option>Catuaí Vermelho</option>
+                        <option>Arara</option>
+                        <option>Mundo Novo</option>
+                    </select>
+                </div>
+            </div>
 
-        <label>Aroma</label>
-        <input type="number" min="0" max="10">
+            <div class="grid-atributos">
+                
+                <div class="campo-grupo">
+                    <label>Aroma</label>
+                    <input type="number" min="0" max="10" placeholder="8">
+                </div>
 
-        <label>Doçura</label>
-        <input type="number" min="0" max="10">
+                <div class="campo-grupo">
+                    <label>Doçura</label>
+                    <input type="number" min="0" max="10" placeholder="9">
+                </div>
 
-        <label>Acidez</label>
-        <input type="number" min="0" max="10">
+                <div class="campo-grupo">
+                    <label>Acidez</label>
+                    <input type="number" min="0" max="10" placeholder="7">
+                </div>
 
-        <label>Corpo</label>
-        <input type="number" min="0" max="10">
+                <div class="campo-grupo">
+                    <label>Corpo</label>
+                    <input type="number" min="0" max="10" placeholder="8">
+                </div>
 
-        <label>Finalização</label>
-        <input type="number" min="0" max="10">
+                <div class="campo-grupo">
+                    <label>Finalização</label>
+                    <input type="number" min="0" max="10" placeholder="9">
+                </div>
 
-        <button>Salvar Avaliação</button>
+                <div class="campo-grupo box-media-container">
+                    <div class="box-media">
+                        <span class="media-label">Média Atual</span>
+                        <span class="media-valor">8.2</span>
+                    </div>
+                </div>
 
-    </section>
+            </div>
 
-    <section class="metodologia">
+            <button class="botao-salvar">
+                <span class="icone-salvar">💾</span> Salvar Avaliação
+            </button>
 
-        <h2>Metodologia</h2>
+        </section>
 
-        <p>As avaliações seguem os critérios da metodologia SCA.</p>
+        <section class="metodologia">
+            <h2>Metodologia</h2>
+            <p>As avaliações seguem os critérios da metodologia SCA.</p>
+            <ul>
+                <li>Aroma</li>
+                <li>Doçura</li>
+                <li>Acidez</li>
+                <li>Corpo</li>
+                <li>Finalização</li>
+            </ul>
+            <p>Cada critério recebe uma nota de 0 a 10.</p>
+            <p>A média final é calculada pela média das notas.</p>
+        </section>
 
-        <ul>
-            <li>Aroma</li>
-            <li>Doçura</li>
-            <li>Acidez</li>
-            <li>Corpo</li>
-            <li>Finalização</li>
-        </ul>
+    </main>
 
-        <p>Cada critério recebe uma nota de 0 a 10.</p>
-
-        <p>A média final é calculada pela média das notas.</p>
-
-    </section>
-
-</main>
+</body>
+</html>
