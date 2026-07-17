@@ -1,8 +1,8 @@
-import logo from '../../index/src/logo.png'
-import xicara from '../../index/src/xicara.png'
-import logoPessoa from '../../index/src/logo_pessoa.png'
-import pasta from '../../index/src/pasta.png'
-import flor from '../../index/src/flor.png'
-import graoCafe from '../../index/src/grao-cafe.png'
+import logo from './logo.svg'
+import xicara from './xicara.svg'
+import logoPessoa from './logo_pessoa.svg'
+import pasta from './pasta.svg'
+import flor from './flor.svg'
+import graoCafe from './grao-cafe.svg'
 
 export { logo, xicara, logoPessoa, pasta, flor, graoCafe }
