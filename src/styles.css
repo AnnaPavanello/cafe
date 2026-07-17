@@ -594,6 +594,35 @@ input::-webkit-inner-spin-button {
   box-sizing: border-box;
 }
 
+.pagina-ranking-vazia {
+  width: 100%;
+  max-width: 780px;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.ranking-vazio-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.01);
+}
+
+.tabela-ranking-vazia {
+  margin-top: 16px;
+  border-radius: 12px;
+}
+
+.linha-ranking-vazia {
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.coluna-nota-vazia {
+  color: var(--cor-texto-mutado);
+  font-size: 1rem;
+}
+
 .tabela-ranking-container {
   background-color: #FFFFFF;
   border: 1px solid var(--cor-borda);

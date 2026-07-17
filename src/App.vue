@@ -10,10 +10,10 @@ import graoCafe from '../index/src/grao-cafe.png'
 const currentPage = ref('home')
 
 const cafes = ref([
-  { nome: 'Bourbon Amarelo', origem: 'Minas Gerais', nota: 8.7 },
-  { nome: 'Catuaí Vermelho', origem: 'Paraná', nota: 7.9 },
-  { nome: 'Arara', origem: 'Espírito Santo', nota: 8.3 },
-  { nome: 'Mundo Novo', origem: 'Bahia', nota: 7.2 },
+  { nome: 'Bourbon Amarelo', origem: 'Minas Gerais', nota: null },
+  { nome: 'Catuaí Vermelho', origem: 'Paraná', nota: null },
+  { nome: 'Arara', origem: 'Espírito Santo', nota: null },
+  { nome: 'Mundo Novo', origem: 'Bahia', nota: null },
 ])
 
 const avaliacao = ref({
@@ -109,7 +109,7 @@ function selecionarCafe(nome) {
           </div>
           <div class="card-info">
             <p class="card-label">Avaliações Registradas</p>
-            <h2 class="card-numero">{{ cafes.filter((cafe) => cafe.nota).length }}</h2>
+            <h2 class="card-numero">{{ cafes.filter((cafe) => cafe.nota !== null).length }}</h2>
           </div>
         </a>
       </section>
@@ -224,23 +224,45 @@ function selecionarCafe(nome) {
 
     <main v-else class="pagina-ranking">
       <section class="tabela-ranking-container">
-        <table class="tabela-ranking">
-          <tbody>
-            <tr v-for="(cafe, index) in [...cafes].sort((a, b) => b.nota - a.nota)" :key="cafe.nome" class="linha-ranking">
-              <td class="coluna-medalha">
-                <span v-if="index === 0" class="medalha ouro">🥇</span>
-                <span v-else-if="index === 1" class="medalha prata">🥈</span>
-                <span v-else-if="index === 2" class="medalha bronze">🥉</span>
-              </td>
-              <td class="coluna-posicao">{{ index + 1 }}º</td>
-              <td class="coluna-info-cafe">
-                <span class="nome-cafe">{{ cafe.nome }}</span>
-                <span class="origem-cafe">{{ cafe.origem }}</span>
-              </td>
-              <td class="coluna-nota">{{ cafe.nota.toFixed(1) }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <template v-if="cafes.some((cafe) => cafe.nota !== null)">
+          <table class="tabela-ranking">
+            <tbody>
+              <tr v-for="(cafe, index) in [...cafes].filter((item) => item.nota !== null).sort((a, b) => b.nota - a.nota)" :key="cafe.nome" class="linha-ranking">
+                <td class="coluna-medalha">
+                  <span v-if="index === 0" class="medalha ouro">🥇</span>
+                  <span v-else-if="index === 1" class="medalha prata">🥈</span>
+                  <span v-else-if="index === 2" class="medalha bronze">🥉</span>
+                </td>
+                <td class="coluna-posicao">{{ index + 1 }}º</td>
+                <td class="coluna-info-cafe">
+                  <span class="nome-cafe">{{ cafe.nome }}</span>
+                  <span class="origem-cafe">{{ cafe.origem }}</span>
+                </td>
+                <td class="coluna-nota">{{ cafe.nota.toFixed(1) }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </template>
+        <div v-else class="pagina-ranking-vazia">
+          <div class="ranking-vazio-card">
+            <h2 class="titulo-pagina"><span class="icone-trofeu">🏆</span> Ranking Geral</h2>
+            <section class="tabela-ranking-container tabela-ranking-vazia">
+              <table class="tabela-ranking">
+                <tbody>
+                  <tr v-for="cafe in cafes" :key="cafe.nome" class="linha-ranking linha-ranking-vazia">
+                    <td class="coluna-vazia"></td>
+                    <td class="coluna-posicao">—</td>
+                    <td class="coluna-info-cafe">
+                      <span class="nome-cafe">{{ cafe.nome }}</span>
+                      <span class="origem-cafe">{{ cafe.origem }}</span>
+                    </td>
+                    <td class="coluna-nota coluna-nota-vazia">—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </div>
       </section>
     </main>
   </div>
