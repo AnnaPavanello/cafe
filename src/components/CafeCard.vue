@@ -1,5 +1,5 @@
 <script setup>
-import graoCafe from '../../index/src/grao-cafe.png'
+import { graoCafe } from '../assets/images'
 
 defineProps({
   cafe: {

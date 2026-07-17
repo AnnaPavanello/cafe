@@ -1,10 +1,7 @@
 <script setup>
 import { computed, inject } from 'vue'
 import { useRouter } from 'vue-router'
-import xicara from '../../index/src/xicara.png'
-import logoPessoa from '../../index/src/logo_pessoa.png'
-import pasta from '../../index/src/pasta.png'
-import flor from '../../index/src/flor.png'
+import { xicara, logoPessoa, pasta, flor } from '../assets/images'
 
 const router = useRouter()
 const cafeApp = inject('cafeApp')

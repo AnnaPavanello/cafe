@@ -1,23 +1,7 @@
 import { createApp, ref, computed } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-import HomeView from './views/HomeView.vue'
-import CafesView from './views/CafesView.vue'
-import AvaliarView from './views/AvaliarView.vue'
-import RankingView from './views/RankingView.vue'
+import router from './router'
 import './styles.css'
-
-const routes = [
-  { path: '/', component: HomeView },
-  { path: '/cafes', component: CafesView },
-  { path: '/avaliar', component: AvaliarView },
-  { path: '/ranking', component: RankingView },
-]
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-})
 
 const cafes = ref([
   { nome: 'Bourbon Amarelo', origem: 'Minas Gerais', nota: null },

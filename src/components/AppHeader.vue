@@ -1,5 +1,5 @@
 <script setup>
-import logo from '../../index/src/logo.png'
+import { logo } from '../assets/images'
 </script>
 
 <template>
