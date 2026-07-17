@@ -1,11 +1,14 @@
 <script setup>
+import { logo } from '../assets/images'
 </script>
 
 <template>
   <header class="cabecalho">
     <div class="cabecalho-container">
       <div class="logo-wrapper">
-        <div class="logo">Café</div>
+        <div class="logo">
+          <img :src="logo" alt="Logo Café" />
+        </div>
       </div>
 
       <nav class="menu">

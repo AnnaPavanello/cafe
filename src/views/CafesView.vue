@@ -1,7 +1,7 @@
 <script setup>
 import { computed, inject } from 'vue'
 import { useRouter } from 'vue-router'
-import CafeCard from '../components/CafeCard.vue'
+import CoffeeCard from '../components/CoffeeCard.vue'
 
 const router = useRouter()
 const cafeApp = inject('cafeApp')
@@ -19,7 +19,7 @@ function selecionarCafe(nome) {
     <h2 class="titulo-pagina"><span class="icone-titulo">☕</span> Cafés Participantes</h2>
 
     <section class="lista-cafes">
-      <CafeCard v-for="cafe in cafes" :key="cafe.nome" :cafe="cafe" show-button @avaliar="selecionarCafe" />
+      <CoffeeCard v-for="cafe in cafes" :key="cafe.nome" :cafe="cafe" @avaliar="selecionarCafe" />
     </section>
   </main>
 </template>
