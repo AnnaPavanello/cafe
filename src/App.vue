@@ -93,7 +93,7 @@ function selecionarCafe(nome) {
       </section>
 
       <section class="cards-status">
-        <div class="card card-participantes">
+        <a href="#" class="card card-participantes" @click.prevent="navegar('cafes')">
           <div class="card-icone-wrapper">
             <img :src="logoPessoa" alt="" class="card-icone" />
           </div>
@@ -101,9 +101,9 @@ function selecionarCafe(nome) {
             <p class="card-label">Cafés Participantes</p>
             <h2 class="card-numero">{{ cafes.length }}</h2>
           </div>
-        </div>
+        </a>
 
-        <div class="card card-avaliacoes">
+        <a href="#" class="card card-avaliacoes" @click.prevent="navegar('ranking')">
           <div class="card-icone-wrapper">
             <img :src="pasta" alt="" class="card-icone" />
           </div>
@@ -111,7 +111,7 @@ function selecionarCafe(nome) {
             <p class="card-label">Avaliações Registradas</p>
             <h2 class="card-numero">{{ cafes.filter((cafe) => cafe.nota).length }}</h2>
           </div>
-        </div>
+        </a>
       </section>
 
       <div class="acao-principal">
