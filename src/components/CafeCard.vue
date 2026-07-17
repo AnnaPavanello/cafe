@@ -1,6 +1,4 @@
 <script setup>
-import { graoCafe } from '../assets/images'
-
 defineProps({
   cafe: {
     type: Object,
@@ -19,7 +17,7 @@ const emit = defineEmits(['avaliar'])
   <div class="cafe">
     <div class="cafe-esquerda">
       <div class="grao-container">
-        <img class="grao-img" :src="graoCafe" alt="Grão de café" />
+        <div class="grao-img">☕</div>
       </div>
       <div class="cafe-textos">
         <h3>{{ cafe.nome }}</h3>

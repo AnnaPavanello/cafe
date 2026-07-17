@@ -1,9 +1,9 @@
-import logoImage from './logo.svg'
-import xicaraImage from './xicara.svg'
-import logoPessoaImage from './logo_pessoa.svg'
-import pastaImage from './pasta.svg'
-import florImage from './flor.svg'
-import graoCafeImage from './grao-cafe.svg'
+import logoImage from './logo.png?url'
+import xicaraImage from './xicara.png?url'
+import logoPessoaImage from './logo_pessoa.png?url'
+import pastaImage from './pasta.png?url'
+import florImage from './flor.png?url'
+import graoCafeImage from './grao-cafe.png?url'
 
 export const logo = logoImage
 export const xicara = xicaraImage
