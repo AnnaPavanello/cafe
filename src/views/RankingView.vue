@@ -23,7 +23,7 @@ const ranking = computed(() => {
         <div class="ranking-vazio-card">
           <h2 class="titulo-pagina"><span class="icone-trofeu">🏆</span> Ranking Geral</h2>
           <section class="tabela-ranking-container tabela-ranking-vazia">
-            <LeaderboardTable :ranking="cafes" />
+            <LeaderboardTable :ranking="cafes" :showPositions="false" />
           </section>
         </div>
       </div>

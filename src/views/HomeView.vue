@@ -1,7 +1,8 @@
 <script setup>
 import { computed, inject } from 'vue'
 import { useRouter } from 'vue-router'
-import { xicara } from '../assets/images'
+
+// Importação da imagem removida para não dar erro! 🎉
 
 const router = useRouter()
 const cafeApp = inject('cafeApp')
@@ -13,7 +14,8 @@ const avaliacoesRegistradas = computed(() => cafeApp.cafes.value.filter((cafe) =
 <template>
   <main class="conteudo">
     <section class="banner">
-      <img class="banner-img" :src="xicara" alt="Xícara de café" />
+      <span class="banner-img" style="font-size: 5rem; display: block; margin-bottom: 1rem;">☕</span>
+      
       <h1 class="titulo">COFFEE QUALITY CHALLENGE</h1>
       <p class="subtitulo">Campeonato de Avaliação Sensorial de Cafés Especiais</p>
       <p class="descricao">Avalie, compare e descubra os melhores cafés através dos seus sentidos.</p>

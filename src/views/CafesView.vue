@@ -19,7 +19,12 @@ function selecionarCafe(nome) {
     <h2 class="titulo-pagina"><span class="icone-titulo">☕</span> Cafés Participantes</h2>
 
     <section class="lista-cafes">
-      <CoffeeCard v-for="cafe in cafes" :key="cafe.nome" :cafe="cafe" @avaliar="selecionarCafe" />
+      <CoffeeCard 
+        v-for="cafe in cafes" 
+        :key="cafe.nome" 
+        :cafe="cafe" 
+        @avaliar="selecionarCafe" 
+      />
     </section>
   </main>
 </template>
